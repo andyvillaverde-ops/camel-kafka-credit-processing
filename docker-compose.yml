@@ -1,0 +1,62 @@
+services:
+
+  kafka-bank:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka-bank
+
+    ports:
+      - "9092:9092"
+
+    environment:
+
+      # KRaft Configuration
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+
+      # Listener configuration
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-bank:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+
+      # Controller quorum
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka-bank:9093
+
+      # Single node cluster
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
+      # KRaft cluster id
+      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+
+    restart: unless-stopped
+
+  kafdrop-bank:
+    image: obsidiandynamics/kafdrop
+    container_name: kafdrop-bank
+
+    depends_on:
+      - kafka-bank
+
+    ports:
+      - "9000:9000"
+
+    environment:
+      KAFKA_BROKERCONNECT: kafka-bank:9092
+
+    restart: unless-stopped
+
+  camel-credit-demo:
+    build: ./camel-credit-demo
+    container_name: camel-integration
+
+    depends_on:
+      - kafka-bank
+
+    ports:
+      - "8080:8080"
+
+    restart: unless-stopped
+
+ 
