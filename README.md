@@ -30,6 +30,10 @@ La arquitectura permite incorporar nuevos consumidores de eventos sin afectar se
 - omnicanalidad
 
 
+## Diagrama de Arquitectura ##
+
+
+![Imagen proyecto de arquitectura_bus_evento](./arquitectura_event_driven.png)
 
 
 **Componentes del proyecto:**
@@ -46,4 +50,3 @@ Una interfaz web para monitorizar clústeres de Apache Kafka. La herramienta mue
 **3 camel-credit-demo:**
 
 
-![Imagen proyecto de arquitectura_bus_evento](./arquitectura_event_driven.png)
