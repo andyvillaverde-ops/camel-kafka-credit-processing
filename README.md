@@ -4,17 +4,17 @@
 
 ## 1. Problema del negocio: ##
 
-### 1. Situación actual: ###
+### 1.1 Situación actual: ###
 Los sistemas core bancarios legacy presentan:
 - alto acoplamiento
 - integraciones síncronas frágiles
 - baja escalabilidad
 - dificultad para incorporar nuevos canales digitales
 
-### 2. Propuesta
+### 1.2. Propuesta
 Implementar una arquitectura event-driven desacoplada basada en Apache Kafka y Apache Camel para separar decisiones de negocio, integración y procesamiento operacional.
 
-### 3. Beneficios
+### 1.3. Beneficios
 - Resiliencia ante fallas del Core Banking
 - Integración desacoplada
 - Escalabilidad independiente
@@ -23,7 +23,7 @@ Implementar una arquitectura event-driven desacoplada basada en Apache Kafka y A
 - Evolución incremental
 - Menor impacto en sistemas legacy
 
-### 4. Capacidad futura
+### 1.4. Capacidad futura
 La arquitectura permite incorporar nuevos consumidores de eventos sin afectar servicios existentes:
 - fraude
 - analytics
@@ -31,12 +31,12 @@ La arquitectura permite incorporar nuevos consumidores de eventos sin afectar se
 - machine learning
 - omnicanalidad
 
-## Vision de Solución ##
+## 2. Vision de Solución ##
 
 ![Imagen proyecto de arquitectura_bus_evento](./vision_solucion.png)
 
 
-## Diagrama de Arquitectura ##
+## 3. Arquitectura de solución ##
 
 ![Imagen proyecto de arquitectura_bus_evento](./arquitectura_event_driven.png)
 
