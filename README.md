@@ -42,7 +42,9 @@ La arquitectura permite incorporar nuevos consumidores de eventos sin afectar se
 
 
 ## 4. Implementación Incremental ##
-## 4.1. Fase 1 backbone mínimo funcional ##
+### 4.1. Fase 1 backbone mínimo funcional ###
+Demostrar el flujo EDA básico.
+
 **Componentes del proyecto:**
 
 **Archivo docker-compose.yml**
@@ -56,4 +58,22 @@ Una interfaz web para monitorizar clústeres de Apache Kafka. La herramienta mue
 
 **3 camel-credit-demo:**
 
+### 4.2. Fase 2 Integración bancaria ###
+Agrega Core Banking Adapter 
+- consume credit.approved
+- simule llamada Bantotal
+- publique credit.disbursed
 
+### Fase 3 — Notification Service
+Consume eventos finales.
+
+### Fase 4 — Resiliencia
+Agrega:
+- retries
+- DLQ
+- idempotencia
+
+### Fase 5 — Observabilidad
+- correlation-id
+- tracing
+- logs estructurados
