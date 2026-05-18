@@ -29,9 +29,12 @@ La arquitectura permite incorporar nuevos consumidores de eventos sin afectar se
 - machine learning
 - omnicanalidad
 
+## Vision de Solución ##
+
+![Imagen proyecto de arquitectura_bus_evento](./vision_solucion.png)
+
 
 ## Diagrama de Arquitectura ##
-
 
 ![Imagen proyecto de arquitectura_bus_evento](./arquitectura_event_driven.png)
 
