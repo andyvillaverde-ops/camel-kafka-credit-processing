@@ -45,16 +45,27 @@ La arquitectura permite incorporar nuevos consumidores de eventos sin afectar se
 ### 4.1. Fase 1 backbone mínimo funcional ###
 Demostrar el flujo EDA básico.
 
-**Componentes del proyecto:**
+**Componentes:**
 
-**Archivo docker-compose.yml**
+**4.1.1. Apache kafka:**
+Archivo docker-compose.yml
 
-**1 kafka-bank:**
+kafka-bank:
 image: confluentinc/cp-kafka:7.5.0
 Imagen oficial de Docker proporcionada por Confluent que contiene una distribución empaquetada y lista para desplegar de Apache Kafka 
 
-**2 kafdrop-bank:**
+kafdrop-bank:
 Una interfaz web para monitorizar clústeres de Apache Kafka. La herramienta muestra información como brokers, temas, particiones, consumidores (incluido el retardo) y permite ver los mensajes.
+
+**4.1.2. Apache Camel:**
+
+
+**4.1.3. Credit Scoring Service**
+
+**4.1.4. Decision Service**
+
+
+
 
 **3 camel-credit-demo:**
 
