@@ -2,8 +2,10 @@
 
 ## Apache Kafka + Apache Camel + Spring Boot + Bantotal Integration ##
 
-### 1. Problematica: ###
-**Los sistemas core bancarios legacy presentan:**
+## 1. Problema del negocio: ##
+
+### 1. Situación actual: ###
+Los sistemas core bancarios legacy presentan:
 - alto acoplamiento
 - integraciones síncronas frágiles
 - baja escalabilidad
