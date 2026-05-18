@@ -36,11 +36,13 @@ La arquitectura permite incorporar nuevos consumidores de eventos sin afectar se
 ![Imagen proyecto de arquitectura_bus_evento](./vision_solucion.png)
 
 
-## 3. Arquitectura de solución ##
+## 3. Arquitectura de solución / Arquitectura Lógica ##
 
 ![Imagen proyecto de arquitectura_bus_evento](./arquitectura_event_driven.png)
 
 
+## 4. Implementación Incremental ##
+## 4.1. Fase 1 backbone mínimo funcional ##
 **Componentes del proyecto:**
 
 **Archivo docker-compose.yml**
