@@ -58,7 +58,9 @@ kafdrop-bank:
 Una interfaz web para monitorizar clústeres de Apache Kafka. La herramienta muestra información como brokers, temas, particiones, consumidores (incluido el retardo) y permite ver los mensajes.
 
 **4.1.2. Apache Camel:**
+Archivo docker-compose.yml
 
+camel-credit-demo: Proyecto camel-credit-demo
 
 **4.1.3. Credit Scoring Service**
 
